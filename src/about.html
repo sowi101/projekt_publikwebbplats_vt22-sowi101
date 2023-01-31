@@ -1,0 +1,144 @@
+<!--
+*Created by Sofia Widholm. 
+*Webbutveckling III, Webbutveckling, Mittuniversitetet.
+*Last update 2022-06-02
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resturang PNY - Om oss</title>
+  <script src="https://kit.fontawesome.com/43f95b5672.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="icon" type="image/png" href="images/favicon32x32.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/close.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/loading.gif" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/next.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/images/prev.png" />
+</head>
+<body>
+  <!-- Header with logotype and navigation -->
+  <header>
+    <div class="header-flex">
+      <!-- Logotype -->
+      <a href="index.html">
+          <img src="images/smalllogotype_white.svg" alt="Restaurang PNYs logotyp"/>
+      </a>
+
+      <!-- Mobile navigation toogle -->
+      <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+          <span class="sr-only">Meny</span>
+          <span class="sr-only">Öppna</span>
+          <span class="fas fa-bars open" aria-hidden="true"></span>
+          <span class="sr-only">Stäng</span>
+          <span class="fas fa-times close" aria-hidden="true"></span>
+      </button>
+
+      <!-- Main navigation -->
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="food.html">MAT</a></li>
+          <li><a href="drinks.html">DRYCK</a></li>
+          <li><a href="booktable.html">BOKA BORD</a></li>
+          <li class="current-menu-item"><a href="about.html">OM OSS</a></li>
+          <li><a href="contact.html">KONTAKT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about">
+    <h1>OM OSS</h1>
+
+    <!-- Information about the restaurant-->
+    <section class="text-content">
+      <p>
+        Restaurang PNY slog upp dörrarna 2015 och har sedan dess serverat
+        Örebro och dess besökare med varierande smaker från världens alla
+        kontinenter. Varför fastna i ett fack, när det finns möjlighet att
+        testa nytt? Vi vill att våra inspiration ska styra vår verksamhet och
+        vi hoppas att våra gäster känner den kärlek till maten som vi
+        därigenom kan ge.
+      </p>
+      <p>
+        Ni hittar Restaurang PNY i hjärtat av Örebro, en bit ner på
+        Stortorget, där ni kan avnjuta en god mat med så väl familj, släkt och
+        vänner i en lugn atmosfär och högklassig service med stadens puls
+        utanför.
+      </p>
+    </section>
+
+    <!-- Pictures from the restaurant -->
+    <section class="text-content">
+      <h2>BILDER FRÅN VÅR VERKSAMHET</h2>
+      <div class="flex">
+        <a href="images/big_pnyrestaurant1.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnyrestaurant1.jpg" alt="Övre serveringen" />
+        </a>
+
+        <a href="images/big_pnyrestaurant2.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnyrestaurant2.jpg" alt="Nedre serveringen vid fönster" />
+        </a>
+
+        <a href="images/big_pnychef1.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnychef1.jpg" alt="Nicholas förbereder uppläggning" />
+        </a>
+
+        <a href="images/big_pnychef2.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnychef2.jpg" alt="Marcus hackar chili" />
+        </a>
+
+        <a href="images/big_pnyserving1.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnyserving1.jpg" alt="Förrätt serverad till gäst" />
+        </a>
+
+        <a href="images/big_pnyserving2.jpg" class="flex-item" data-lightbox="Servering" data-title="Restaurang PNY">
+          <img src="images/small_pnyserving2.jpg" alt="Ett sällskap avnjuter mat och dryck" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with contact information, big logotype and opening hours -->
+  <footer>
+    <!-- Contact information -->
+    <article>
+        <h2>Adress</h2>
+        <p>Stortorget 8, 702 11 Örebro</p>
+
+        <h2>Telefon</h2>
+        <p><a href="tel:019000000">019 - 00 00 00</a></p>
+
+        <h2>E-post</h2>
+        <p><a href="mailto:kontakt@restaurangpny.se">kontakt@restaurangpny.se</a></p>
+    </article>
+
+    <!-- Big logotype -->
+    <div>
+        <img src="images/biglogotype_white.svg" alt="Restaurang PNYs logotyp" />
+    </div>
+
+    <!-- Opening hours -->
+    <article>
+        <h2>Öppettider</h2>
+        <p>
+            Måndag 16.00-22.00 <br />
+            Tisdag 16.00-22.00 <br />
+            Onsdag 16.00-22.00 <br />
+            Torsdag 16.00-22.00 <br />
+            Fredag 16.00-00.00 <br />
+            Lördag 17.00-00.00 <br />
+            Söndag 16.00-21.00 <br />
+        </p>
+    </article>
+</footer>
+
+<!-- Link to Javascript file -->
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js" integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

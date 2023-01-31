@@ -1,0 +1,129 @@
+<!--
+*Created by Sofia Widholm. 
+*Webbutveckling III, Webbutveckling, Mittuniversitetet.
+*Last update 2022-06-02
+-->
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturang PNY</title>
+    <script src="https://kit.fontawesome.com/43f95b5672.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="images/favicon32x32.png" />
+</head>
+<body>
+    <!-- Header with logotype and navigation -->
+    <header>
+        <div class="header-flex">
+            <!-- Logotype -->
+            <a href="index.html">
+                <img src="images/smalllogotype_white.svg" alt="Restaurang PNYs logotyp" />
+            </a>
+
+            <!-- Mobile navigation toogle -->
+            <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+                <span class="sr-only">Meny</span>
+                <span class="sr-only">Öppna</span>
+                <span class="fas fa-bars open" aria-hidden="true"></span>
+                <span class="sr-only">Stäng</span>
+                <span class="fas fa-times close" aria-hidden="true"></span>
+            </button>
+
+            <!-- Main navigation -->
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="food.html">MAT</a></li>
+                    <li><a href="drinks.html">DRYCK</a></li>
+                    <li><a href="booktable.html">BOKA BORD</a></li>
+                    <li><a href="about.html">OM OSS</a></li>
+                    <li><a href="contact.html">KONTAKT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Main content -->
+    <main>
+        <h1>VÄLKOMMEN TILL RESTAURANG PNY</h1>
+        <!-- Welcome text -->
+        <section class="text-content">
+            <p>
+                Vi skulle klassa oss som den mest ombytliga restaurangen som finns här
+                i Örebro, då våra menyer skapas utifrån den inspiration vi har för
+                närvarande. Vi ser det som ett vinnande koncept för att så väl kockar
+                som er gäster eftersom det blir variation. Den meny som finns här på
+                webbplatsen är den som gäller för stunden, hoppas ni hittar något i er
+                smak och att vi ses i vimlet.
+            </p>
+        </section>
+
+        <!-- Color block with offer -->
+        <section class="color-block">
+            <h2>ERBJUDANDE</h2>
+            <p class="text-content">
+                Nu är det italienska veckor på Restaurang PNY och den 2 juni är det
+                Italiens nationaldag. Det firar vi hela veckan med att bjuda den
+                billigaste efterrätten vid köp av minst 2 stycken och det regleras
+                automatiskt vid betalning.
+            </p>
+
+            <br />
+
+            <span>Buon appetito!</span>
+        </section>
+        
+        <!-- Link with pictures -->
+        <section class="text-content text-on-picture">
+            <a href="food.html">
+                <img src="images/food.jpg" alt="Tallrik med paella" />
+                <h2>MAT</h2>
+            </a>
+            <a href="drinks.html">
+                <img src="images/drinks.jpg" alt="Röd drink i högt glas" />
+                <h2>DRYCK</h2>
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer with contact information, big logotype and opening hours -->
+    <footer>
+        <!-- Contact information -->
+        <article>
+            <h2>Adress</h2>
+            <p>Stortorget 8, 702 11 Örebro</p>
+
+            <h2>Telefon</h2>
+            <p><a href="tel:019000000">019 - 00 00 00</a></p>
+
+            <h2>E-post</h2>
+            <p><a href="mailto:kontakt@restaurangpny.se">kontakt@restaurangpny.se</a></p>
+        </article>
+
+        <!-- Big logotype -->
+        <div>
+            <img src="images/biglogotype_white.svg" alt="Restaurang PNYs logotyp" />
+        </div>
+    
+        <!-- Opening hours -->
+        <article>
+            <h2>Öppettider</h2>
+            <p>
+                Måndag 16.00-22.00 <br />
+                Tisdag 16.00-22.00 <br />
+                Onsdag 16.00-22.00 <br />
+                Torsdag 16.00-22.00 <br />
+                Fredag 16.00-00.00 <br />
+                Lördag 17.00-00.00 <br />
+                Söndag 16.00-21.00 <br />
+            </p>
+        </article>
+    </footer>
+
+    <!-- Link to Javascript file -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+// FORM ELEMENTS
+form {
+    width: 100%;
+    margin: auto;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=email], input[type=date], input[type=time], select, textarea {
+    width: 100%;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid $primary-text-color;
+}
+
+input[type=text], input[type=number], input[type=password], input[type=email], input[type=date], input[type=time] {
+    line-height: 44px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+    padding: 0.5em 2em 0.65em 1em;
+}
+
+.error {
+    color: $error-color;
+    font-weight: bold;
+}
+
+// BUTTONS
+input[type=submit] {
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+    padding: 1% 2%;
+    line-height: 44px;
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 1.25em;
+    cursor: pointer;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    @include tablet {
+        width: 50%;
+    }
+
+    @include desktop {
+        width: 50%;
+    }
+
+    &:hover {
+        background-color: $hover-secondary-color;
+    }
+}
+
+.contact input[type=submit] {
+    width: 100%;
+}
+
+// TABLES
+table {
+    width: 100%;
+
+    tr:nth-child(even) {
+        td {
+            padding-bottom: 2%;
+        }
+    }
+
+    .item-name {
+        color: $secondary-color;
+        width: 85%;
+        padding-bottom: 1%;
+    }
+
+    .item-price {
+        width: 15%;
+        text-align: right;
+        font-weight: 700;
+        padding-bottom: 1%;
+    }
+}
+
+// NAVIGATION
+@include mobile {
+    nav .menu[data-visible=true] {
+        transform: translateX(0%);
+        transition: transform 350ms ease-in;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        border: 0;
+        width: 2em;
+        top: 2.6em;
+        right: 1em;
+        font-size: 110%;
+        background-color: transparent;
+    }
+
+    .mobile-nav-toggle[aria-expanded=true] .close {
+        display: block;
+        color: $secondary-text-color;
+    }
+
+    .mobile-nav-toggle[aria-expanded=true] .open {
+        display: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded=false] .close {
+        display: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded=false] .open {
+        display: block;
+        color: $secondary-text-color;
+    }
+
+    nav {
+        .menu {
+            z-index: 1000;
+            gap: 0.2em;
+            position: fixed;
+            inset: 0 0 0 50%;
+            background-color: $primary-color;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: start;
+            padding: min(20vh, 4em) 0;
+            transform: translateX(100%);
+            margin-top: 0;
+            margin-bottom: 0;
+
+            li {
+                padding: 4%;
+                display: block;
+
+                &:hover {
+                    background-color: $hover-primary-color;
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    color: $secondary-text-color;
+                    border: none;
+                    text-decoration: none;
+                    font-size: 1em;
+                    font-weight: 700;
+
+                    &:hover {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    nav .menu[data-visible=true] {
+        transform: translateX(0%);
+        transition: transform 350ms ease-in;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        border: 0;
+        width: 2em;
+        top: 1.7em;
+        right: 1em;
+        font-size: 110%;
+        background-color: transparent;
+    }
+
+    .mobile-nav-toggle[aria-expanded=true] .close {
+        display: block;
+        color: $secondary-text-color;
+    }
+
+    .mobile-nav-toggle[aria-expanded=true] .open {
+        display: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded=false] .close {
+        display: none;
+    }
+
+    .mobile-nav-toggle[aria-expanded=false] .open {
+        display: block;
+        color: $secondary-text-color;
+    }
+
+    nav {
+        .menu {
+            z-index: 1000;
+            gap: 0.2em;
+            position: fixed;
+            inset: 0 0 0 50%;
+            background-color: $primary-color;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: start;
+            padding: min(20vh, 4em) 0;
+            transform: translateX(100%);
+            margin-top: 0;
+            margin-bottom: 0;
+
+
+            li {
+                padding: 4%;
+                display: block;
+
+                &:hover {
+                    background-color: $hover-primary-color;
+                }
+
+                a {
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    color: $secondary-text-color;
+                    border: none;
+                    text-decoration: none;
+                    font-size: 1em;
+                    font-weight: 700;
+
+                    &:hover {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include desktop {
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    nav {
+        width: 90%;
+        text-align: right;
+
+        ul {
+            width: 100%;
+            padding: 0;
+
+            li {
+                width: 15%;
+                min-width: 100px;
+                padding: 0 1%;
+                display: inline-block;
+                text-align: center;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    line-height: 40px;
+                    border-bottom: 2px solid $primary-color-opacity;
+                    font-size: 1.125em;
+                    text-decoration: none;
+                    color: $secondary-text-color;
+
+                    &:hover {
+                        border-bottom: 2px solid $secondary-text-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .current-menu-item a {
+        border-bottom: 2px solid $secondary-text-color;
+    }
+}
+
+// PICTURE LINKS
+.text-on-picture {
+    margin: 2% auto;
+
+    @include mobile {
+        width: 95%;
+        display: block;
+    }
+
+    @include tablet {
+        width: 90%;
+        display: flex;
+        gap: 2%;
+    }
+
+    @include desktop {
+        width: 60%;
+        min-width: 770px;
+        display: flex;
+        gap: 2%;
+    }
+
+    a {
+        text-align: center;
+        color: $secondary-text-color;
+        position: relative;
+        margin: auto;
+        box-sizing: border-box;
+
+        @include mobile {
+            width: 100%;
+            display: block;
+            margin: 2% auto;
+            max-width: 500px;
+
+        }
+
+        @include tablet {
+            width: 100%;
+            display: block;
+            margin: 2% 0;
+        }
+
+        @include desktop {
+            width: 49%;
+            display: inline-block;
+            margin: 2% 0;
+        }
+
+        img {
+            border-radius: 8px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        h2 {
+            text-align: center;
+            color: $secondary-text-color;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 4px 4px 8px #444444;
+            margin: 0;
+        }
+    }
+}
+
+// COLOR BLOCK
+.color-block {
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+    padding: 2% 0 4%;
+
+    span {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.2em;
+        margin: auto;
+        display: block;
+    }
+}

@@ -1,0 +1,194 @@
+<!--
+*Created by Sofia Widholm. 
+*Webbutveckling III, Webbutveckling, Mittuniversitetet.
+*Last update 2022-06-04
+-->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturang PNY - Boka bord</title>
+    <script src="https://kit.fontawesome.com/43f95b5672.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="images/favicon32x32.png" />
+</head>
+<body>
+    <!-- Header with logotype and navigation -->
+    <header>
+        <div class="header-flex">
+            <!-- Logotype -->
+            <a href="index.html">
+                <img src="images/smalllogotype_white.svg" alt="Restaurang PNYs logotyp"/>
+            </a>
+
+            <!-- Mobile navigation toogle -->
+            <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+                <span class="sr-only">Meny</span>
+                <span class="sr-only">Öppna</span>
+                <span class="fas fa-bars open" aria-hidden="true"></span>
+                <span class="sr-only">Stäng</span>
+                <span class="fas fa-times close" aria-hidden="true"></span>
+            </button>
+
+            <!-- Main navigation -->
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="food.html">MAT</a></li>
+                    <li><a href="drinks.html">DRYCK</a></li>
+                    <li class="current-menu-item">
+                    <a href="booktable.html">BOKA BORD</a>
+                    </li>
+                    <li><a href="about.html">OM OSS</a></li>
+                    <li><a href="contact.html">KONTAKT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Main content -->
+    <main>
+        <h1>BOKA BORD</h1>
+
+        <!-- Form to book table -->
+        <form class="text-content" id="booktable">
+            <p>
+                För att vara säker att det ska finnas bord till er, speciellt om ni är
+                ett större sällskap, vid ert besök rekommenderar vi att ni bokar bord.
+                Det kan göras via formuläret nedan eller via telefon. Vid större
+                sällskap än 8 personer ber vi er att ni kontaktar oss på telefon
+                <a href="tel:019000000">019 - 00 00 00</a>.
+            </p>
+
+            <div class="flex">
+                <p class="flex-item-mini">
+                    <label for="date"><strong>Datum *</strong></label>
+                    <br />
+                    <input type="date" name="date" id="date" />
+                    <br />
+                    <span class="error" id="date-message"></span>
+                </p>
+                <p class="flex-item-mini">
+                    <label for="time"><strong>Tid *</strong></label>
+                    <br />
+                    <input type="time" id="time" name="time" min="16:00" max="22:30" />
+                    <br />
+                    <span class="error" id="time-message"></span>
+                </p>
+                <p class="flex-item-mini">
+                    <label for="guests"><strong>Antal gäster *</strong></label>
+                    <br />
+                    <select name="guests" id="guests">
+                    <option value="" selected>Välj</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    </select>
+                    <br />
+                    <span class="error" id="guest-message"></span>
+                </p>
+            </div>
+
+            <div class="flex">
+                <p class="flex-item">
+                    <label for="firstname"><strong>Förnamn *</strong></label>
+                    <br />
+                    <input type="text" id="firstname" name="firstname" />
+                    <br />
+                    <span class="error" id="firstname-message"></span>
+                </p>
+                <p class="flex-item">
+                    <label for="lastname"><strong>Efternamn *</strong></label>
+                    <br />
+                    <input type="text" id="lastname" name="lastname" />
+                    <br />
+                    <span class="error" id="lastname-message"></span>
+                </p>
+            </div>
+            <div class="flex">
+                <p class="flex-item">
+                    <label for="email"><strong>E-postadress *</strong></label>
+                    <br />
+                    <input type="email" id="email" name="email" />
+                    <br />
+                    <span class="error" id="email-message"></span>
+                </p>
+                <p class="flex-item">
+                    <label for="phonenum"><strong>Telefonnummer *</strong></label>
+                    <br />
+                    <input type="number" min="0" id="phonenum" name="phonenum" />
+                    <br />
+                    <span class="error" id="phone-message"></span>
+                </p>
+            </div>
+
+            <p>
+                <label for="request"><strong>Allergier/Önskemål</strong></label>
+                <br />
+                <textarea name="request" id="request" cols="30" rows="10"></textarea>
+            </p>
+
+            <p>* = obligatorisk att fylla i.</p>
+
+            <p>
+                För att kunna slutföra bokningen behöver du godkänna att de personuppgifter som skickas med i bokningen lagras av Restaurang PNY.
+                Dessa uppgifter raderas efter ert besök eller vid avbokning.
+            </p>
+            
+            <p>
+                <input type="checkbox" required name="consent" id="consent" />
+                <label for="consent"><strong>Jag samtycker till att Restaurang PNY lagrar mina personuppgifter.</strong></label>
+            </p>
+
+            <p>
+                <input type="submit" id="submit" value="Boka bord" />
+            </p>
+
+            <p id="booking-message"></p>
+        </form>
+    </main>
+
+    <!-- Footer with contact information, big logotype and opening hours -->
+    <footer>
+        <!-- Contact information -->
+        <article>
+            <h2>Adress</h2>
+            <p>Stortorget 8, 702 11 Örebro</p>
+
+            <h2>Telefon</h2>
+            <p><a href="tel:019000000">019 - 00 00 00</a></p>
+
+            <h2>E-post</h2>
+            <p><a href="mailto:kontakt@restaurangpny.se">kontakt@restaurangpny.se</a></p>
+        </article>
+
+        <!-- Big logotype -->
+        <div>
+            <img src="images/biglogotype_white.svg" alt="Restaurang PNYs logotyp" />
+        </div>
+    
+        <!-- Opening hours -->
+        <article>
+            <h2>Öppettider</h2>
+            <p>
+                Måndag 16.00-22.00 <br />
+                Tisdag 16.00-22.00 <br />
+                Onsdag 16.00-22.00 <br />
+                Torsdag 16.00-22.00 <br />
+                Fredag 16.00-00.00 <br />
+                Lördag 17.00-00.00 <br />
+                Söndag 16.00-21.00 <br />
+            </p>
+        </article>
+    </footer>
+
+    <!-- Link to Javascript file -->
+    <script src="js/main.js"></script>
+</body>
+</html>

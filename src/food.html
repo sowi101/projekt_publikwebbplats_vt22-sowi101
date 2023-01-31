@@ -1,0 +1,120 @@
+<!--
+*Created by Sofia Widholm. 
+*Webbutveckling III, Webbutveckling, Mittuniversitetet.
+*Last update 2022-06-02
+-->
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resturang PNY - Mat</title>
+    <script src="https://kit.fontawesome.com/43f95b5672.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/png" href="images/favicon32x32.png" />
+</head>
+<body>
+    <!-- Header with logotype and navigation -->
+    <header>
+        <div class="header-flex">
+            <!-- Logotype -->
+            <a href="index.html">
+                <img src="images/smalllogotype_white.svg" alt="Restaurang PNYs logotyp"/>
+            </a>
+
+            <!-- Mobile navigation toogle -->
+            <button class="mobile-nav-toggle" aria-controls="menu" aria-expanded="false">
+                <span class="sr-only">Meny</span>
+                <span class="sr-only">Öppna</span>
+                <span class="fas fa-bars open" aria-hidden="true"></span>
+                <span class="sr-only">Stäng</span>
+                <span class="fas fa-times close" aria-hidden="true"></span>
+            </button>
+
+            <!-- Main navigation -->
+            <nav>
+                <ul class="menu" id="menu">
+                    <li class="current-menu-item"><a href="food.html">MAT</a></li>
+                    <li><a href="drinks.html">DRYCK</a></li>
+                    <li><a href="booktable.html">BOKA BORD</a></li>
+                    <li><a href="about.html">OM OSS</a></li>
+                    <li><a href="contact.html">KONTAKT</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Main content -->
+    <main class="menu">    
+        <h1>MAT</h1>
+
+        <!-- Starters -->
+        <section class="text-content">
+            <h2>FÖRRÄTT</h2>
+            <table id="starter-table"></table>
+        </section>
+    
+        <!-- Picture banner -->
+        <img src="images/food_banner.jpg" alt="Olika kötträtter" />
+
+        <!-- Main course -->
+        <section class="text-content">
+            <h2>HUVUDRÄTT</h2>
+            <table id="main-course-table"></table>
+        </section>
+
+        <!-- Picture banner -->
+        <img src="images/dessert_banner.jpg" alt="Chokladdessert med jordgubbar" />
+
+
+        <!-- Desserts -->
+        <section class="text-content">
+            <h2>DESSERT</h2>
+            <table id="dessert-table"></table>
+        </section>
+
+        <p class="centered-small-text">
+            Maträtter är hämtade från <a href="https://www.fratelliorebro.se/" target="_blank">Fratelli Örebros</a> och <a href="https://trattorian.se/">Trattorians</a> menyer.
+        </p>
+
+    </main>
+
+    <!-- Footer with contact information, big logotype and opening hours -->
+    <footer>
+        <!-- Contact information -->
+        <article>
+            <h2>Adress</h2>
+            <p>Stortorget 8, 702 11 Örebro</p>
+
+            <h2>Telefon</h2>
+            <p><a href="tel:019000000">019 - 00 00 00</a></p>
+
+            <h2>E-post</h2>
+            <p><a href="mailto:kontakt@restaurangpny.se">kontakt@restaurangpny.se</a></p>
+        </article>
+
+        <!-- Big logotype -->
+        <div>
+            <img src="images/biglogotype_white.svg" alt="Restaurang PNYs logotyp" />
+        </div>
+    
+        <!-- Opening hours -->
+        <article>
+            <h2>Öppettider</h2>
+            <p>
+                Måndag 16.00-22.00 <br />
+                Tisdag 16.00-22.00 <br />
+                Onsdag 16.00-22.00 <br />
+                Torsdag 16.00-22.00 <br />
+                Fredag 16.00-00.00 <br />
+                Lördag 17.00-00.00 <br />
+                Söndag 16.00-21.00 <br />
+            </p>
+        </article>
+    </footer>
+
+    <!-- Link to Javascript file -->
+    <script src="js/main.js"></script>
+</body>
+</html>

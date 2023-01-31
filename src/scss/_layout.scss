@@ -1,0 +1,198 @@
+// LAYOUT ELEMENTS
+header {
+    background-image: url('../images/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(0.5625 * 100vw);
+
+    .flex {
+        justify-content: space-between;
+        align-items: center;
+
+        nav {
+            width: 70%;
+
+            ul {
+                text-align: right;
+            }
+        }
+    }
+}
+
+main {
+    padding: 1% 0;
+}
+
+footer {
+    background-color: $primary-color;
+    color: $secondary-text-color;
+
+    @include mobile {
+        display: block;
+        margin: auto;
+        padding: 2%;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+
+    div {
+        text-align: center;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 33%;
+        }
+
+        @include desktop {
+            width: 33%;
+        }
+
+        img {
+            max-width: 370px;
+            width: 100%;
+        }
+    }
+
+    article {
+        align-self: center;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 33%;
+        }
+
+        @include desktop {
+            width: 33%;
+        }
+
+        h2 {
+            margin-bottom: 2%;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 0.5%;
+
+            a {
+                color: $secondary-text-color;
+            }
+        }
+    }
+}
+
+// WIDTH OF CONTENT
+.text-content {
+    padding: 1% 0;
+    margin: auto;
+
+    @include mobile {
+        width: 95%;
+    }
+
+    @include tablet {
+        width: 90%;
+    }
+
+    @include desktop {
+        width: 40%;
+        min-width: 770px;
+    }
+}
+
+/* Width in menus */
+.menu {
+    .text-content {
+        margin: 3% auto;
+
+        @include mobile {
+            width: 95%;
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
+
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+}
+
+// GRIDS
+.header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex {
+    gap: 2%;
+
+    @include mobile {
+        display: block;
+    }
+
+    @include tablet {
+        display: flex;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+
+    .flex-item {
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 50%;
+        }
+    }
+
+    .flex-item-mini {
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 33%;
+        }
+
+        @include desktop {
+            width: 33%;
+        }
+    }
+}
+
+.about {
+    .flex {
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .flex-item {
+            width: 49%;
+            margin-bottom: 1%;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Cabin:wght@400;700&display=swap');
+
+// RESETS
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+// VARIABLES
+/* Breakpoints */
+$max-mobile: 600px;
+$min-tablet: 601px;
+$max-tablet: 1000px;
+$min-desktop: 1001px;
+
+/* Colors */
+$primary-color: #125b50;
+$hover-primary-color: darken($primary-color, 10);
+$primary-color-opacity: rgb(18, 91, 80, 0.0);
+$secondary-color: #EBA83A;
+$hover-secondary-color: darken($secondary-color, 10);
+$primary-text-color: #000000;
+$secondary-text-color: #ffffff;
+$error-color: #BB371A;
+
+/* Fonts */
+$main-font: 'Cabin', sans-serif;
+$heading-font: 'Alata', sans-serif;
+
+// MIXINS
+/* Media queries */
+@mixin mobile {
+    @media (max-width: $max-mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $min-desktop) {
+        @content;
+    }
+}
+
+// BASIC SETTINGS
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+/* TEXT ELEMENTS */
+h1, h2, h3, h4, h5 {
+    font-family: $heading-font;
+    text-align: center;
+}
+
+@include mobile {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@include tablet {
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@include desktop {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.3em;
+    }
+
+    h5 {
+        font-size: 1.15em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.contact h2 {
+    text-align: left;
+}
+
+main {
+    a {
+        color: $primary-text-color;
+    }
+}
+
+#booking-message {
+    font-weight: 700;
+}
+
+.centered-small-text {
+    font-size: 0.8em;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+/* IMAGE ELEMENTS */
+
+img {
+    width: 100%;
+}
+
+/* MISCELLANEOUS */
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
