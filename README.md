@@ -22,10 +22,6 @@ Webbplatsen är skapad med hjälp av HTML för grundläggande innehåll, SCSS f�
 - main.js: innehåller kod för konsumering av webbplats genom Fetch API.
 - navigation.js: innehåller kod för mobilmeny.
 
-Utskrift av meny genomförs med hjälp av ett GET-anrop till API-adressen https://studenter.miun.se/~sowi2102/writeable/dt173g/projekt/webservice/menuapi.php.
-
-Skapande av bokning genomförs med hjälp av ett POST-anrop till API-adressen https://studenter.miun.se/~sowi2102/writeable/dt173g/projekt/webservice/bookingapi.php.
-
 ## Automatiseringssystem
 Jag har skapat ett automatiseringssystem med hjälp av tekniken Gulp och olika npm packages. Den innehåller tre tasks för de olika filtyperna HTML, SCSS och JavaScript och en task för bilder. Det finns också en så kallad watch-task som har till uppgift att upptäcka när det skett förändringar i filerna.
 
